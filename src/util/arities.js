@@ -5,6 +5,8 @@
  */
 export default {
     "frac": 2,
+    "dfrac": 2,
+    "tfrac": 2,
     "sqrt": 1,
     "sin": 1,
     "cos": 1,

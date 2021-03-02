@@ -20,6 +20,9 @@ export const frac = function frac(a, b) {
     return a / b;
 };
 
+export const dfrac = frac;
+export const tfrac = frac;
+
 export const logn = function logn(x, b) {
     return Math.log(x) / Math.log(b);
 };
@@ -40,7 +43,7 @@ export const cot = function cot(x) {
     return 1 / Math.tan(x);
 };
 
-const locals = { fact, frac, logn, rootn, sec, csc, cot };
+const locals = { fact, frac, dfrac, tfrac, logn, rootn, sec, csc, cot };
 
 // Copy things from Math. Can't use Object.assign since Math has non-enumerable properties.
 for (const k of Object.getOwnPropertyNames(Math)) {

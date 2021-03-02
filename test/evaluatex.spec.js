@@ -136,6 +136,11 @@ describe("Evaluatex", function () {
         test("\\frac {4 ^ 2} 32", 32 / 3, {}, {}, { latex: true });
     });
 
+    it("support LaTeX's dfrac and tfrac", function () {
+        test("\\dfrac 4 2", 2, {}, {}, { latex: true });
+        test("\\tfrac 4 2", 2, {}, {}, { latex: true });
+    });
+
     it("support LaTeX times and cdot", function () {
       const xAry = new Array(10).fill(0).map((_, i) => i + 1)
       const yAry = new Array(10).fill(0).map((_, i) => i + 1)
